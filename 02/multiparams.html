@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Multiparametro</title>        
+        <script src="../angular.min.js" ></script>
+    </head>
+    <body ng-controller="myCtrl">
+        <input type="text" ng-model="contato.nome"/><br/>
+        <input type="number" ng-model="contato.idade"/><br/>
+        <input type="number" ng-model="contato.telefone"/><br />
+        <hr>
+        <input type="button" ng-click="cadastrar(contato)" value="Cadastrar"/>
+
+        <ul ng-repeat="cont in contatos">
+            <li>{{cont.nome}}</li>
+            <li>{{cont.idade}}</li>
+            <li>{{cont.telefone}}</li>
+        </ul>
+        <script src="multiparam.controller.js"></script>
+    </body>
+<html>
